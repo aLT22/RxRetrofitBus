@@ -1,0 +1,52 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    //application identifier
+    applicationId = "ru.relex.rxretrofitbus"
+
+    //sdk versions
+    minSdkVersion = 21
+    compileSdkVersion = 26
+    targetSdkVersion = 26
+
+    //build tools version
+    buildToolsVersion = "26.0.0"
+
+    //version
+    versionCode = 1
+    versionName = "1.0"
+
+    /*
+    *   library versions
+    * */
+    //support
+    //app compat
+    appCompatVersion = "26.0.0-alpha1"
+    //constraint layout version
+    constraintLayoutVersion = "1.0.2"
+
+    //junit
+    junitVersion = "4.12"
+}
